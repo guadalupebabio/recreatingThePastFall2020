@@ -1,28 +1,39 @@
 let trans =120;//transparency for fill
+let img;
 
 function setup() {
-  createCanvas(600, 600);
+  createCanvas(466, 751);
   textSize(width / 5);
+  img = loadImage('Muriel.jpg');
 }
 
 function draw() {
-  background(255);
-  trans = mouseX;
+  
+  background(253,239,228);
+
+  trans = mouseX; //changes transparency
   blendMode(DARKEST);
   
-  fill(trans, trans, trans,trans);
-  text('BAUHAUS', 0, 100,70);
+  textFont('Helvetica Bold', 90);
+  
+  
   fill(255, 204, 0,trans);
-  text('BAUHAUS', 0, 110,70);
+  text('BAUHAUS', 0, 0,70);
+  fill(255, 204, 0,trans);
+  text('BAUHAUS', 0, 12,70);
   
   fill(255, 70, 20,trans);
-  text('BAUHAUS', 0, 120,70);
+  text('BAUHAUS', 0, 24,70);
   fill(255, 70, 20,trans);
-  text('BAUHAUS', 0, 130,70);
+  text('BAUHAUS', 0, 36,70);
   
   fill(0, 130, 255, trans);
-  text('BAUHAUS', 0, 140,70);
+  text('BAUHAUS', 0, 48,70);
   fill(0, 130, 255, trans);
-  text('BAUHAUS', 0, 150,70);
+  text('BAUHAUS', 0,  60,70);
+  
+  image(img, 0, 0); //load image
+  
   blendMode(BLEND);
+  
 }
